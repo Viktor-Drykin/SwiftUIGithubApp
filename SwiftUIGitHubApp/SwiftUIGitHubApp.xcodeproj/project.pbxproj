@@ -14,6 +14,14 @@
 		C086FC912CC57195008CDCA5 /* SwiftUIGitHubAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FC902CC57195008CDCA5 /* SwiftUIGitHubAppTests.swift */; };
 		C086FC9B2CC57195008CDCA5 /* SwiftUIGitHubAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FC9A2CC57195008CDCA5 /* SwiftUIGitHubAppUITests.swift */; };
 		C086FC9D2CC57195008CDCA5 /* SwiftUIGitHubAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FC9C2CC57195008CDCA5 /* SwiftUIGitHubAppUITestsLaunchTests.swift */; };
+		C086FCB22CC571F3008CDCA5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCA92CC571F3008CDCA5 /* APIClient.swift */; };
+		C086FCB32CC571F3008CDCA5 /* APIServicePerformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCAA2CC571F3008CDCA5 /* APIServicePerformable.swift */; };
+		C086FCB42CC571F3008CDCA5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCAB2CC571F3008CDCA5 /* NetworkError.swift */; };
+		C086FCB52CC571F3008CDCA5 /* RepositoriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCAD2CC571F3008CDCA5 /* RepositoriesDTO.swift */; };
+		C086FCB62CC571F3008CDCA5 /* RepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCAE2CC571F3008CDCA5 /* RepositoriesService.swift */; };
+		C086FCB72CC571F3008CDCA5 /* RepositoriesServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCAF2CC571F3008CDCA5 /* RepositoriesServiceImpl.swift */; };
+		C086FCBC2CC57255008CDCA5 /* RepositoriesServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCB92CC57255008CDCA5 /* RepositoriesServiceTest.swift */; };
+		C086FCBD2CC57255008CDCA5 /* APIServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCBA2CC57255008CDCA5 /* APIServiceStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		C086FC962CC57195008CDCA5 /* SwiftUIGitHubAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIGitHubAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C086FC9A2CC57195008CDCA5 /* SwiftUIGitHubAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIGitHubAppUITests.swift; sourceTree = "<group>"; };
 		C086FC9C2CC57195008CDCA5 /* SwiftUIGitHubAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIGitHubAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C086FCA92CC571F3008CDCA5 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C086FCAA2CC571F3008CDCA5 /* APIServicePerformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServicePerformable.swift; sourceTree = "<group>"; };
+		C086FCAB2CC571F3008CDCA5 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C086FCAD2CC571F3008CDCA5 /* RepositoriesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesDTO.swift; sourceTree = "<group>"; };
+		C086FCAE2CC571F3008CDCA5 /* RepositoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesService.swift; sourceTree = "<group>"; };
+		C086FCAF2CC571F3008CDCA5 /* RepositoriesServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesServiceImpl.swift; sourceTree = "<group>"; };
+		C086FCB92CC57255008CDCA5 /* RepositoriesServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesServiceTest.swift; sourceTree = "<group>"; };
+		C086FCBA2CC57255008CDCA5 /* APIServiceStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +110,8 @@
 		C086FC7E2CC57192008CDCA5 /* SwiftUIGitHubApp */ = {
 			isa = PBXGroup;
 			children = (
+				C086FCB82CC57206008CDCA5 /* Screens */,
+				C086FCB12CC571F3008CDCA5 /* Services */,
 				C086FC7F2CC57192008CDCA5 /* SwiftUIGitHubAppApp.swift */,
 				C086FC812CC57192008CDCA5 /* ContentView.swift */,
 				C086FC832CC57194008CDCA5 /* Assets.xcassets */,
@@ -113,6 +131,8 @@
 		C086FC8F2CC57195008CDCA5 /* SwiftUIGitHubAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				C086FCBB2CC57255008CDCA5 /* Helpers */,
+				C086FCB92CC57255008CDCA5 /* RepositoriesServiceTest.swift */,
 				C086FC902CC57195008CDCA5 /* SwiftUIGitHubAppTests.swift */,
 			);
 			path = SwiftUIGitHubAppTests;
@@ -125,6 +145,50 @@
 				C086FC9C2CC57195008CDCA5 /* SwiftUIGitHubAppUITestsLaunchTests.swift */,
 			);
 			path = SwiftUIGitHubAppUITests;
+			sourceTree = "<group>";
+		};
+		C086FCAC2CC571F3008CDCA5 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				C086FCA92CC571F3008CDCA5 /* APIClient.swift */,
+				C086FCAA2CC571F3008CDCA5 /* APIServicePerformable.swift */,
+				C086FCAB2CC571F3008CDCA5 /* NetworkError.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		C086FCB02CC571F3008CDCA5 /* ReposService */ = {
+			isa = PBXGroup;
+			children = (
+				C086FCAD2CC571F3008CDCA5 /* RepositoriesDTO.swift */,
+				C086FCAE2CC571F3008CDCA5 /* RepositoriesService.swift */,
+				C086FCAF2CC571F3008CDCA5 /* RepositoriesServiceImpl.swift */,
+			);
+			path = ReposService;
+			sourceTree = "<group>";
+		};
+		C086FCB12CC571F3008CDCA5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C086FCAC2CC571F3008CDCA5 /* APIService */,
+				C086FCB02CC571F3008CDCA5 /* ReposService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C086FCB82CC57206008CDCA5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C086FCBB2CC57255008CDCA5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C086FCBA2CC57255008CDCA5 /* APIServiceStub.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C086FCB62CC571F3008CDCA5 /* RepositoriesService.swift in Sources */,
+				C086FCB32CC571F3008CDCA5 /* APIServicePerformable.swift in Sources */,
 				C086FC822CC57192008CDCA5 /* ContentView.swift in Sources */,
+				C086FCB72CC571F3008CDCA5 /* RepositoriesServiceImpl.swift in Sources */,
 				C086FC802CC57192008CDCA5 /* SwiftUIGitHubAppApp.swift in Sources */,
+				C086FCB22CC571F3008CDCA5 /* APIClient.swift in Sources */,
+				C086FCB42CC571F3008CDCA5 /* NetworkError.swift in Sources */,
+				C086FCB52CC571F3008CDCA5 /* RepositoriesDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C086FC912CC57195008CDCA5 /* SwiftUIGitHubAppTests.swift in Sources */,
+				C086FCBD2CC57255008CDCA5 /* APIServiceStub.swift in Sources */,
+				C086FCBC2CC57255008CDCA5 /* RepositoriesServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
