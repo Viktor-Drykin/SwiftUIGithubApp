@@ -9,13 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        let apiService = APIClient()
+        let repositoriesService = RepositoriesServiceImpl(apiService: apiService)
+        let viewModel = RepositoryListViewModel(repositoriesService: repositoriesService)
+        return RepositoryListView(viewModel: viewModel, userName: "John Doe")
     }
 }
 
