@@ -14,12 +14,6 @@ struct RepositoryListView: View {
 
     var body: some View {
         ScrollView {
-            Text(userName)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.bottom, 40)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
             switch viewModel.state {
             case .loading:
                 ProgressView()
@@ -32,8 +26,9 @@ struct RepositoryListView: View {
         .scrollIndicators(.hidden)
         .padding()
         .onAppear {
-            viewModel.searchRepositories()
+            viewModel.searchRepositories(for: userName)
         }
+        .navigationTitle(userName)
     }
 
     private func contentView(with repoList: [Repository]) -> some View {
@@ -51,7 +46,9 @@ struct RepositoryListView: View {
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(8)
-                        .background(Color.white)
+                        .background(
+                            Color.white.opacity(0.9)
+                        )
                 }
 
             }
@@ -63,6 +60,7 @@ struct RepositoryListView: View {
             .fontWeight(.medium)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .transition(.move(edge: .top))
+            .animation(.bouncy, value: viewModel.state)
     }
 }
 

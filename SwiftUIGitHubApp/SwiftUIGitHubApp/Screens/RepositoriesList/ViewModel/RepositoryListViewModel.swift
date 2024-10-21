@@ -31,10 +31,6 @@ final class RepositoryListViewModel: ObservableObject {
         self.repositoriesService = repositoriesService
     }
 
-    func searchRepositories() {
-        searchRepositories(for: "Apple")
-    }
-
     func searchRepositories(for user: String) {
         state = .loading
         Task {
@@ -68,4 +64,21 @@ final class RepositoryListViewModel: ObservableObject {
         }()
         return .failed(message: errorMessage)
     }
+}
+
+extension RepositoryListViewModel.State: Equatable {
+    static func == (lhs: RepositoryListViewModel.State, rhs: RepositoryListViewModel.State) -> Bool {
+        switch (lhs, rhs) {
+        case (.loading, .loading):
+            return true
+        case (.failed(let lhsMessage) ,.failed(let rhsMessage)):
+            return lhsMessage == rhsMessage
+        case (.loaded(let lhsRepos), .loaded(let rhsRepos)):
+            return lhsRepos.count == rhsRepos.count
+        default:
+            return false
+        }
+    }
+
+
 }
