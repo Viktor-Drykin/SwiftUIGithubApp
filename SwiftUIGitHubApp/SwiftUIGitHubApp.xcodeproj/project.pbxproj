@@ -33,6 +33,8 @@
 		C0FE06402CDB978B008B358D /* PullRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE063F2CDB978B008B358D /* PullRequestService.swift */; };
 		C0FE06422CDB97D6008B358D /* PullRequestServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE06412CDB97D6008B358D /* PullRequestServiceImpl.swift */; };
 		C0FE06462CDBB874008B358D /* PullRequestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE06452CDBB874008B358D /* PullRequestListView.swift */; };
+		C0FE064A2CDBBA5F008B358D /* PullRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE06492CDBBA5F008B358D /* PullRequestModel.swift */; };
+		C0FE064C2CDBBA6B008B358D /* PullRequestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE064B2CDBBA6B008B358D /* PullRequestListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		C0FE063F2CDB978B008B358D /* PullRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestService.swift; sourceTree = "<group>"; };
 		C0FE06412CDB97D6008B358D /* PullRequestServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestServiceImpl.swift; sourceTree = "<group>"; };
 		C0FE06452CDBB874008B358D /* PullRequestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListView.swift; sourceTree = "<group>"; };
+		C0FE06492CDBBA5F008B358D /* PullRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestModel.swift; sourceTree = "<group>"; };
+		C0FE064B2CDBBA6B008B358D /* PullRequestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +303,8 @@
 		C0FE06432CDBB856008B358D /* PullRequestList */ = {
 			isa = PBXGroup;
 			children = (
+				C0FE06482CDBBA52008B358D /* Model */,
+				C0FE06472CDBBA49008B358D /* ViewModel */,
 				C0FE06442CDBB863008B358D /* Views */,
 			);
 			path = PullRequestList;
@@ -310,6 +316,22 @@
 				C0FE06452CDBB874008B358D /* PullRequestListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C0FE06472CDBBA49008B358D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C0FE064B2CDBBA6B008B358D /* PullRequestListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C0FE06482CDBBA52008B358D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0FE06492CDBBA5F008B358D /* PullRequestModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,8 +470,10 @@
 				C086FC822CC57192008CDCA5 /* ContentView.swift in Sources */,
 				C086FCB72CC571F3008CDCA5 /* RepositoriesServiceImpl.swift in Sources */,
 				C086FCC42CC5738F008CDCA5 /* RepositoryListViewModel.swift in Sources */,
+				C0FE064C2CDBBA6B008B358D /* PullRequestListViewModel.swift in Sources */,
 				C0FE06462CDBB874008B358D /* PullRequestListView.swift in Sources */,
 				C086FC802CC57192008CDCA5 /* SwiftUIGitHubAppApp.swift in Sources */,
+				C0FE064A2CDBBA5F008B358D /* PullRequestModel.swift in Sources */,
 				C086FCB22CC571F3008CDCA5 /* APIClient.swift in Sources */,
 				C0BD2DED2CDB91DE00BCC392 /* CombineAPIService.swift in Sources */,
 				C03A432B2CC6BD8600ED6E16 /* SearchView.swift in Sources */,
