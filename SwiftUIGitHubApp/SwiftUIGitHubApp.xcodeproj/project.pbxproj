@@ -27,6 +27,12 @@
 		C086FCC42CC5738F008CDCA5 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCC12CC5738F008CDCA5 /* RepositoryListViewModel.swift */; };
 		C086FCC72CC5744B008CDCA5 /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCC62CC5744B008CDCA5 /* RepositoryListView.swift */; };
 		C086FCCA2CC57DD0008CDCA5 /* RepositoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FCC92CC57DD0008CDCA5 /* RepositoryItemView.swift */; };
+		C0BD2DEC2CDB91DE00BCC392 /* CombineAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD2DE92CDB91DE00BCC392 /* CombineAPIClient.swift */; };
+		C0BD2DED2CDB91DE00BCC392 /* CombineAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD2DEA2CDB91DE00BCC392 /* CombineAPIService.swift */; };
+		C0BD2DF02CDB930700BCC392 /* PullRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD2DEF2CDB930700BCC392 /* PullRequestDTO.swift */; };
+		C0FE06402CDB978B008B358D /* PullRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE063F2CDB978B008B358D /* PullRequestService.swift */; };
+		C0FE06422CDB97D6008B358D /* PullRequestServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE06412CDB97D6008B358D /* PullRequestServiceImpl.swift */; };
+		C0FE06462CDBB874008B358D /* PullRequestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE06452CDBB874008B358D /* PullRequestListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +76,12 @@
 		C086FCC12CC5738F008CDCA5 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		C086FCC62CC5744B008CDCA5 /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
 		C086FCC92CC57DD0008CDCA5 /* RepositoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryItemView.swift; sourceTree = "<group>"; };
+		C0BD2DE92CDB91DE00BCC392 /* CombineAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombineAPIClient.swift; sourceTree = "<group>"; };
+		C0BD2DEA2CDB91DE00BCC392 /* CombineAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombineAPIService.swift; sourceTree = "<group>"; };
+		C0BD2DEF2CDB930700BCC392 /* PullRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestDTO.swift; sourceTree = "<group>"; };
+		C0FE063F2CDB978B008B358D /* PullRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestService.swift; sourceTree = "<group>"; };
+		C0FE06412CDB97D6008B358D /* PullRequestServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestServiceImpl.swift; sourceTree = "<group>"; };
+		C0FE06452CDBB874008B358D /* PullRequestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +208,8 @@
 		C086FCB12CC571F3008CDCA5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C0BD2DEE2CDB92E300BCC392 /* PullRequestService */,
+				C0BD2DEB2CDB91DE00BCC392 /* CombineAPIService */,
 				C086FCAC2CC571F3008CDCA5 /* APIService */,
 				C086FCB02CC571F3008CDCA5 /* ReposService */,
 			);
@@ -205,6 +219,7 @@
 		C086FCB82CC57206008CDCA5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C0FE06432CDBB856008B358D /* PullRequestList */,
 				C03A43282CC6BD6700ED6E16 /* Search */,
 				C086FCBE2CC57352008CDCA5 /* RepositoriesList */,
 			);
@@ -260,6 +275,41 @@
 				C086FCC92CC57DD0008CDCA5 /* RepositoryItemView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		C0BD2DEB2CDB91DE00BCC392 /* CombineAPIService */ = {
+			isa = PBXGroup;
+			children = (
+				C0BD2DE92CDB91DE00BCC392 /* CombineAPIClient.swift */,
+				C0BD2DEA2CDB91DE00BCC392 /* CombineAPIService.swift */,
+			);
+			path = CombineAPIService;
+			sourceTree = "<group>";
+		};
+		C0BD2DEE2CDB92E300BCC392 /* PullRequestService */ = {
+			isa = PBXGroup;
+			children = (
+				C0BD2DEF2CDB930700BCC392 /* PullRequestDTO.swift */,
+				C0FE063F2CDB978B008B358D /* PullRequestService.swift */,
+				C0FE06412CDB97D6008B358D /* PullRequestServiceImpl.swift */,
+			);
+			path = PullRequestService;
+			sourceTree = "<group>";
+		};
+		C0FE06432CDBB856008B358D /* PullRequestList */ = {
+			isa = PBXGroup;
+			children = (
+				C0FE06442CDBB863008B358D /* Views */,
+			);
+			path = PullRequestList;
+			sourceTree = "<group>";
+		};
+		C0FE06442CDBB863008B358D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0FE06452CDBB874008B358D /* PullRequestListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,12 +448,18 @@
 				C086FC822CC57192008CDCA5 /* ContentView.swift in Sources */,
 				C086FCB72CC571F3008CDCA5 /* RepositoriesServiceImpl.swift in Sources */,
 				C086FCC42CC5738F008CDCA5 /* RepositoryListViewModel.swift in Sources */,
+				C0FE06462CDBB874008B358D /* PullRequestListView.swift in Sources */,
 				C086FC802CC57192008CDCA5 /* SwiftUIGitHubAppApp.swift in Sources */,
 				C086FCB22CC571F3008CDCA5 /* APIClient.swift in Sources */,
+				C0BD2DED2CDB91DE00BCC392 /* CombineAPIService.swift in Sources */,
 				C03A432B2CC6BD8600ED6E16 /* SearchView.swift in Sources */,
+				C0FE06422CDB97D6008B358D /* PullRequestServiceImpl.swift in Sources */,
 				C086FCC72CC5744B008CDCA5 /* RepositoryListView.swift in Sources */,
 				C086FCB42CC571F3008CDCA5 /* NetworkError.swift in Sources */,
+				C0BD2DF02CDB930700BCC392 /* PullRequestDTO.swift in Sources */,
+				C0BD2DEC2CDB91DE00BCC392 /* CombineAPIClient.swift in Sources */,
 				C086FCB52CC571F3008CDCA5 /* RepositoriesDTO.swift in Sources */,
+				C0FE06402CDB978B008B358D /* PullRequestService.swift in Sources */,
 				C086FCC32CC5738F008CDCA5 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
