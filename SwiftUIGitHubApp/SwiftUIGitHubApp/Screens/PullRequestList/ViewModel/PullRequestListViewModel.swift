@@ -11,6 +11,7 @@ import Combine
 class PullRequestListViewModel: ObservableObject {
     
     @Published var pullRequests: [PullRequestModel] = []
+    @Published var error: String? = nil
 
     private let apiService: PullRequestService
     private let repoName: String
@@ -25,15 +26,16 @@ class PullRequestListViewModel: ObservableObject {
 
     func fetchPullRequests() {
         apiService.fetchPullRequests(with: userName, repo: repoName)
-            .map { returnedRepos in
-                <#code#>
+            .tryMap { returnedRepos in
+                returnedRepos.map { PullRequestModel(with: $0) }
             }
-            .sink { completion in
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
                 switch completion {
                 case .finished:
                     break
                 case .failure(let error):
-                    // handle error
+                    self?.error = error.localizedDescription
                     break
                 }
             } receiveValue: { [weak self] repos in

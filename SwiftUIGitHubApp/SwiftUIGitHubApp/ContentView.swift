@@ -9,6 +9,7 @@ import SwiftUI
 
 enum NavigationDestinations: Hashable {
     case repositories(userName: String)
+    case pullRequests(userName: String, repoName: String)
 }
 
 
@@ -22,7 +23,12 @@ struct ContentView: View {
                                     let apiService = APIClient()
                                     let repositoriesService = RepositoriesServiceImpl(apiService: apiService)
                                     let viewModel = RepositoryListViewModel(repositoriesService: repositoriesService)
-                                    return RepositoryListView(viewModel: viewModel, userName: userName)
+                                    RepositoryListView(viewModel: viewModel, userName: userName)
+                                case .pullRequests(let userName, let repoName):
+                                    let apiService = CombineAPIClient()
+                                    let pullRequestsService = PullRequestServiceImpl(apiService: apiService)
+                                    let viewModel = PullRequestListViewModel(apiService: pullRequestsService, repoName: repoName, userName: userName)
+                                    PullRequestListView(viewModel: viewModel)
                                 }
                             }
         }

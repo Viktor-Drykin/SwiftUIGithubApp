@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 protocol PullRequestService: AnyObject {
-    func fetchPullRequests(with user: String, repo: String) -> AnyPublisher<[RepositoryDTO], Error>
+    func fetchPullRequests(with user: String, repo: String) -> AnyPublisher<[PullRequestDTO], Error>
 }
