@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct PullRequestListView: View {
+
+    @ObservedObject var viewModel: PullRequestListViewModel
+
+    init(viewModel: PullRequestListViewModel) {
+        self.viewModel = viewModel
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        return ScrollView {
+            if let error = viewModel.error {
+                Text(error)
+            } else {
+                ForEach(viewModel.pullRequests) { pullRequest in
+                    PullRequestItemView(pullRequestItem: pullRequest)
+                }
+            }
+        }
+        .onAppear {
+            viewModel.fetchPullRequests()
+        }
     }
 }
 
 #Preview {
-    PullRequestListView()
+    PullRequestListView(viewModel: PullRequestListViewModel(apiService: PullRequestServiceImpl(apiService: CombineAPIClient()), repoName: "SwiftUIGithubApp", userName: "Viktor-Drykin"))
 }

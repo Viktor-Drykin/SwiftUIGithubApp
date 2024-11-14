@@ -29,8 +29,10 @@ class PullRequestServiceImpl {
 }
 
 extension PullRequestServiceImpl: PullRequestService {
-    func fetchPullRequests(with user: String, repo: String) -> AnyPublisher<[RepositoryDTO], Error> {
-        let urlPath = domain + "/repos/#USER_NAME#/#REPO#/pulls"
+    func fetchPullRequests(with user: String, repo: String) -> AnyPublisher<[PullRequestDTO], Error> {
+        var urlPath = domain + "/repos/\(Constant.userNamePlaceholder)/\(Constant.repoPlaceholder)/pulls"
+        urlPath.replace(Constant.userNamePlaceholder, with: user)
+        urlPath.replace(Constant.repoPlaceholder, with: repo)
         guard let url = URL(string: urlPath) else {
             return Fail(error: PullRequestServiceError.incorrectURL)
                 .eraseToAnyPublisher()

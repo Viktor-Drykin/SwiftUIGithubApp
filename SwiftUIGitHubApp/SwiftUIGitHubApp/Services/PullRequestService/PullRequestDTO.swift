@@ -4,6 +4,7 @@ import Foundation
 struct PullRequestDTO: Decodable {
     let url: String?
     let id: Int?
+    let labels: [Label]?
     let nodeID: String?
     let htmlURL: String?
     let diffURL: String?
@@ -15,7 +16,7 @@ struct PullRequestDTO: Decodable {
     let title: String?
     let user: User?
     let body: String?
-    let createdAt, updatedAt: Date?
+    let createdAt, updatedAt: String?
     let closedAt, mergedAt, mergeCommitSHA, assignee: String?
     let draft: Bool?
     let commitsURL, reviewCommentsURL: String?
@@ -26,7 +27,7 @@ struct PullRequestDTO: Decodable {
     let authorAssociation: String?
 
     enum CodingKeys: String, CodingKey {
-        case url, id
+        case url, id, labels
         case nodeID = "node_id"
         case htmlURL = "html_url"
         case diffURL = "diff_url"
@@ -48,6 +49,23 @@ struct PullRequestDTO: Decodable {
         case head, base
         case links = "_links"
         case authorAssociation = "author_association"
+    }
+}
+
+struct Label: Decodable {
+    let id: Int?
+    let nodeID: String?
+    let url: String?
+    let name, color: String?
+    let welcomeDefault: Bool?
+    let description: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case nodeID = "node_id"
+        case url, name, color
+        case welcomeDefault = "default"
+        case description
     }
 }
 
@@ -86,7 +104,7 @@ struct Repo: Decodable {
     let issuesURL, pullsURL, milestonesURL, notificationsURL: String?
     let labelsURL, releasesURL: String?
     let deploymentsURL: String?
-    let createdAt, updatedAt, pushedAt: Date?
+    let createdAt, updatedAt, pushedAt: String?
     let gitURL, sshURL: String?
     let cloneURL: String?
     let svnURL: String?

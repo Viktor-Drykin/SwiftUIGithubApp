@@ -35,6 +35,7 @@ struct SearchView: View {
                         .fontWeight(.bold)
                         .foregroundStyle(Color.accentColor)
                     TextField("Enter user name", text: $userName)
+                        .autocorrectionDisabled()
                         .padding()
                         .frame(minHeight: 40)
                         .overlay(

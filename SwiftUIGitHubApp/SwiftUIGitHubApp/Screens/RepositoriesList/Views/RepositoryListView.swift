@@ -38,7 +38,9 @@ struct RepositoryListView: View {
             pinnedViews: [.sectionHeaders]) {
                 Section {
                     ForEach(repoList) { repository in
-                        RepositoryItemView(repoName: repository.title, repoDescription: repository.description)
+                        NavigationLink(value: NavigationDestinations.pullRequests(userName: userName, repoName: repository.title)) {
+                            RepositoryItemView(repoName: repository.title, repoDescription: repository.description)
+                        }
                     }
                 } header: {
                     Text("Repositories")
